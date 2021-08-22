@@ -1,0 +1,26 @@
+{
+  "name": "react-ssr-demo",
+  "version": "1.0.0",
+  "description": "Demo project for React server side rendering",
+  "main": "dist/server/index.js",
+  "scripts": {
+    "server:watch": "npx ts-node-dev --project server-tsconfig.json src/server/app.ts",
+    "server:build": "tsc --build server-tsconfig.json"
+  },
+  "author": "Thomas Himmelstoss",
+  "license": "MIT",
+  "engines": {
+    "node": "16.x.x",
+    "npm": "7.x.x"
+  },
+  "dependencies": {
+    "express": "4.17.1"
+  },
+  "devDependencies": {
+    "@types/express": "4.17.13",
+    "@types/node": "16.7.1",
+    "node-dev": "7.0.0",
+    "ts-node-dev" : "1.1.8",
+    "typescript": "4.3.5"
+  }
+}
