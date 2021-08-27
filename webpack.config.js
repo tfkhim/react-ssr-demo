@@ -46,7 +46,10 @@ const devConfig = {
   mode: 'development',
   devServer: {
     open: '/',
-    hot: true
+    hot: true,
+    devMiddleware: {
+      writeToDisk: true
+    }
   }
 }
 
