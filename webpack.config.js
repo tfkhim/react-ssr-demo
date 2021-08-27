@@ -12,8 +12,9 @@ const baseConfig = {
     client: resolvePath('src/client/index.tsx')
   },
   output: {
+    clean: true,
     path: resolvePath('dist/client'),
-    filename: '[name].js'
+    filename: 'static/[name].js'
   },
   resolve: {
     extensions: [".tsx", ".ts", ".js"],
@@ -44,7 +45,7 @@ const prodConfig = {
 const devConfig = {
   mode: 'development',
   devServer: {
-    open: '/index.html',
+    open: '/',
     hot: true
   }
 }
