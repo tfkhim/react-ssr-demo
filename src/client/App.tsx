@@ -1,5 +1,9 @@
 import React, { FC } from 'react'
 
-export const App: FC = () => {
-    return <h1>Hello World!</h1>
+export interface AppProps {
+    name: string
+}
+
+export const App: FC<AppProps> = ({ name }) => {
+    return <h1>{`Hello ${name}!`}</h1>
 }

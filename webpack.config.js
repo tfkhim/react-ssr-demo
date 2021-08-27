@@ -59,7 +59,7 @@ const devConfig = {
           return pathName === '/' || pathName === '/index.html'
         },
         target: 'http://localhost:3000',
-        pathRewrite: {'.*': '/'},
+        pathRewrite: {'^/index.html': '/'},
       }
     ]
   }
