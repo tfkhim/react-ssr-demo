@@ -13,8 +13,9 @@ const baseConfig = {
   },
   output: {
     clean: true,
-    path: resolvePath('dist/client'),
-    filename: 'static/[name].js'
+    path: resolvePath('dist/client/static'),
+    filename: '[name].js',
+    publicPath: '/static/'
   },
   resolve: {
     extensions: [".tsx", ".ts", ".js"],
@@ -32,7 +33,8 @@ const baseConfig = {
   plugins: [
     new HtmlWebpackPlugin(
       {
-        template: resolvePath('src/client/index.html')
+        template: resolvePath('src/client/index.html'),
+        filename: resolvePath('dist/client/index.html')
       }
     )
   ]
@@ -48,8 +50,18 @@ const devConfig = {
     open: '/',
     hot: true,
     devMiddleware: {
+      index: false,
       writeToDisk: true
-    }
+    },
+    proxy: [
+      {
+        context: (pathName) => {
+          return pathName === '/' || pathName === '/index.html'
+        },
+        target: 'http://localhost:3000',
+        pathRewrite: {'.*': '/'},
+      }
+    ]
   }
 }
 
