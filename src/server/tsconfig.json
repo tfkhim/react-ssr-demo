@@ -1,10 +1,10 @@
 {
-  "extends": "./tsconfig.json",
-  "include": ["src/server/**/*"],
+  "extends": "../../tsconfig.json",
+  "include": ["./**/*"],
   "compilerOptions": {
     "target": "esnext",
     "module": "commonjs",
     "moduleResolution": "node",
-    "outDir": "dist/server"
+    "outDir": "../../dist/server"
   }
 }
