@@ -3,7 +3,6 @@
   "include": ["./**/*"],
   "compilerOptions": {
     "target": "esnext",
-    "outDir": "../../dist/client",
-    "jsx": "react"
+    "outDir": "../../dist/client"
   }
 }

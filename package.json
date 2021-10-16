@@ -5,7 +5,9 @@
   "private": true,
   "scripts": {
     "dev": "npx concurrently -k 'npm:server:watch' 'npm:client:serve'",
+    "build": "npx concurrently 'npm:server:build' 'npm:client:build'",
     "server:watch": "npx ts-node-dev --project src/server/tsconfig.json src/server/app.ts",
+    "server:start": "node dist/server/server/app.js",
     "server:build": "tsc --build src/server/tsconfig.json",
     "client:serve": "npx rimraf dist/client && npx webpack serve --env dev",
     "client:build": "npx webpack build"

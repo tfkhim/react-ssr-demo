@@ -1,6 +1,6 @@
 {
   "extends": "../../tsconfig.json",
-  "include": ["./**/*"],
+  "include": ["./**/*", "../views/**/*"],
   "compilerOptions": {
     "target": "esnext",
     "module": "commonjs",

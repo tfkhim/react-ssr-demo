@@ -25,7 +25,7 @@ const baseConfig = {
       {
         test: /\.tsx?$/,
         exclude: '/node_modules/',
-        include: resolvePath('src/client'),
+        include: [resolvePath('src/client'), resolvePath('src/views')],
         use: 'ts-loader',
       }
     ]

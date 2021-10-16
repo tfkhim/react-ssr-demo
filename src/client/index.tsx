@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { App } from './App'
+import { App } from '../views/App'
 
 const appDataNode = document.querySelector('#APP_DATA')
 const jsonData = appDataNode?.textContent
