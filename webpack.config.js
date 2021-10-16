@@ -51,7 +51,9 @@ const devConfig = {
     hot: true,
     devMiddleware: {
       index: false,
-      writeToDisk: true
+      writeToDisk: (filePath) => {
+        return /\.html$/.test(filePath)
+      }
     },
     proxy: [
       {
