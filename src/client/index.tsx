@@ -8,7 +8,7 @@ const appProperties = jsonData ? JSON.parse(jsonData) : null
 const name = appProperties?.name
 
 if(typeof name === 'string') {
-    ReactDOM.render(<App name={name}/>, document.querySelector('#root'))
+    ReactDOM.hydrate(<App name={name}/>, document.querySelector('#root'))
 } else {
-    console.exception('Application data is missing or not valid')
+    console.error('Application data is missing or not valid')
 }
